@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search Results</title>
+</head>
+<body>
+<h1>Museum Locations of Artwork for {{ artist_name }} in {{ state }}</h1>
+<ul>
+  {% for show in shows %}
+  <li class="blue-text">
+    <strong>{{ show['title'] }}</strong><br>
+    Date: {{ show['date'] }}<br>
+    Location: {{ show['location'] }}
+  </li>
+  {% endfor %}
+</ul>
+<a href="/">Back to Search</a>
+</body>
+</html>
